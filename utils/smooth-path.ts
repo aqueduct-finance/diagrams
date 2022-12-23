@@ -4,7 +4,7 @@ import { IMetricChartData, IMetricMappedDataPoint, IMetricOppositeLine } from '.
 const SVG_HEIGHT = 1600;
 
 // width of the svg element
-const SVG_WIDTH = 7000;
+const SVG_WIDTH = 3000;
 
 // radius of the circle at the tip of the line
 const CIRCLE_RADIUS = 5;

@@ -16,7 +16,7 @@ function getEveryNth(arr, nth) {
 
 function DcaDisplay() {
 
-    const convertedPoint = mapDataToSvgCoordinates(getEveryNth(ethPriceData, 2))
+    const convertedPoint = mapDataToSvgCoordinates(getEveryNth(ethPriceData, 1))
     const points = calculatePathSmooth(convertedPoint);
 
     const convertedPoint2 = mapDataToSvgCoordinates(getEveryNth(ethPriceData, 8))
@@ -36,7 +36,7 @@ function DcaDisplay() {
 
     return (
         <svg
-            className="w-full h-full lg:-rotate-y-sm" viewBox="0 0 7000 1600"
+            className="w-full h-full lg:-rotate-y-sm" viewBox="0 0 3000 1600"
         >
             <path
                 ref={dummyRef}
@@ -46,24 +46,24 @@ function DcaDisplay() {
                 strokeWidth="00"
             />
             <path
-                d='M 0 1550 L 7000 450'
-                className='stroke-blue-500/252 centered-shadow-test52'
+                d='M 0 1550 L 3000 450'
+                className='stroke-blue-500/252 2centered-shadow-test52'
                 fill="none"
-                strokeWidth="25"
+                strokeWidth="40"
             />
             <animated.path
                 fill="none"
-                strokeWidth="25"
+                strokeWidth="40"
                 strokeDasharray={pathLength}
                 d={points}
-                className='stroke-white/30 will-change-transform centered-shadow-white-bottom '
+                className='stroke-white/80 will-change-transform 2centered-shadow-white-bottom '
             />
             <animated.path
                 fill="none"
-                strokeWidth="25"
+                strokeWidth="75"
                 strokeDasharray={pathLength}
                 d={points2}
-                className='stroke-white centered-shadow-test5 will-change-transform '
+                className='stroke-white 2centered-shadow-test5 will-change-transform '
             />
         </svg>
     )
@@ -85,8 +85,8 @@ const Banner = () => {
 
     return (
         <div className="flex w-screen h-screen items-center justify-center bg-white poppins-font overflow-hidden " >
-            <div className='flex items-center justify-center h-[50rem] w-[84rem] transition-all bg-aqBlue'>
-                <div className={'flex items-center justify-center poppins-font text-8xl font-bold text-white centered-shadow-test52 w-full h-full '}>
+            <div className='flex items-center justify-center h-[50rem] w-[84rem] transition-all bg-black'>
+                <div className={'flex items-center justify-center poppins-font text-8xl font-bold text-aqBlue 2centered-shadow-test52 w-full h-full '}>
                     <DcaDisplay />
                 </div>
             </div>
